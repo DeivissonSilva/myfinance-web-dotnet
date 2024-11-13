@@ -26,6 +26,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Deivisson/Projetos_Estudos/myfinance-web-dotnet/myfinance-web-dotnet/myfinance-web-dotnet/Views/PlanoContas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm9Db250YXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Deivisson/Projetos_Estudos/myfinance-web-dotnet/myfinance-web-dotnet/myfinance-web-dotnet/Views/PlanoContas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm9Db250YXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Deivisson/Projetos_Estudos/myfinance-web-dotnet/myfinance-web-dotnet/myfinance-web-dotnet/Views/PlanoContas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbm9Db250YXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

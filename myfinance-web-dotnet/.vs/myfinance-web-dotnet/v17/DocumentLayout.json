@@ -1,12 +1,105 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|d:\\deivisson\\projetos_estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\controllers\\planocontascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|solutionrelative:myfinance-web-dotnet\\controllers\\planocontascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|d:\\deivisson\\projetos_estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\app_code_clean\\core\\services\\planocontasservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|solutionrelative:myfinance-web-dotnet\\app_code_clean\\core\\services\\planocontasservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|d:\\deivisson\\projetos_estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\app_code_clean\\core\\services\\interfaces\\iplanocontasservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|solutionrelative:myfinance-web-dotnet\\app_code_clean\\core\\services\\interfaces\\iplanocontasservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|d:\\deivisson\\projetos_estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\views\\planocontas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|solutionrelative:myfinance-web-dotnet\\views\\planocontas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|d:\\deivisson\\projetos_estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\views\\planocontas\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|solutionrelative:myfinance-web-dotnet\\views\\planocontas\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IPlanoContasServices.cs",
+              "DocumentMoniker": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\App_Code_Clean\\Core\\Services\\Interfaces\\IPlanoContasServices.cs",
+              "RelativeDocumentMoniker": "myfinance-web-dotnet\\App_Code_Clean\\Core\\Services\\Interfaces\\IPlanoContasServices.cs",
+              "ToolTip": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\App_Code_Clean\\Core\\Services\\Interfaces\\IPlanoContasServices.cs",
+              "RelativeToolTip": "myfinance-web-dotnet\\App_Code_Clean\\Core\\Services\\Interfaces\\IPlanoContasServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T19:26:55.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlanoContasServices.cs",
+              "DocumentMoniker": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\App_Code_Clean\\Core\\Services\\PlanoContasServices.cs",
+              "RelativeDocumentMoniker": "myfinance-web-dotnet\\App_Code_Clean\\Core\\Services\\PlanoContasServices.cs",
+              "ToolTip": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\App_Code_Clean\\Core\\Services\\PlanoContasServices.cs",
+              "RelativeToolTip": "myfinance-web-dotnet\\App_Code_Clean\\Core\\Services\\PlanoContasServices.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAqwDgAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T19:24:52.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlanoContasController.cs",
+              "DocumentMoniker": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Controllers\\PlanoContasController.cs",
+              "RelativeDocumentMoniker": "myfinance-web-dotnet\\Controllers\\PlanoContasController.cs",
+              "ToolTip": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Controllers\\PlanoContasController.cs",
+              "RelativeToolTip": "myfinance-web-dotnet\\Controllers\\PlanoContasController.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAcwFoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T19:17:52.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Views\\PlanoContas\\Index.cshtml",
+              "RelativeDocumentMoniker": "myfinance-web-dotnet\\Views\\PlanoContas\\Index.cshtml",
+              "ToolTip": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Views\\PlanoContas\\Index.cshtml",
+              "RelativeToolTip": "myfinance-web-dotnet\\Views\\PlanoContas\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-13T19:15:08.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Views\\PlanoContas\\Delete.cshtml",
+              "RelativeDocumentMoniker": "myfinance-web-dotnet\\Views\\PlanoContas\\Delete.cshtml",
+              "ToolTip": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Views\\PlanoContas\\Delete.cshtml",
+              "RelativeToolTip": "myfinance-web-dotnet\\Views\\PlanoContas\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-13T19:03:01.592Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

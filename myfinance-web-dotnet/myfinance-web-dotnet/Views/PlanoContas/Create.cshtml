@@ -1,0 +1,20 @@
+﻿@model PlanoContaModel
+
+<h2>Novo Plano de Conta</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label>Nome</label>
+        <input asp-for="Descricao" class="form-control" />
+    </div>
+    <div class="form-check">
+        <input asp-for="Tipo" class="form-check-input" type="radio" value="R" />
+        <label class="form-check-label" for="Escolha">Receita</label>
+    </div>
+    <div class="form-check">
+        <input asp-for="Tipo" class="form-check-input" type="radio" value="D" />
+        <label class="form-check-label" for="Escolha">Despesa</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>

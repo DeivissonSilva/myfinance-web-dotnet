@@ -1,0 +1,15 @@
+﻿@model PlanoContaModel
+
+<h2>Excluir Plano de Conta</h2>
+<p>Tem certeza de que deseja excluir este cliente?</p>
+
+<div>
+    <h4>@Model.Descricao</h4>
+    <p>@Model.Tipo</p>
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="@Model.Id" />
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
