@@ -66,6 +66,43 @@ namespace myfinance_web_dotnet.Controllers
             return View(planoContaModel);   
         }
 
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var planoContas = await _planoContasServices.ObterPlanoContaPorIdAsync((int)id);
+
+            if (planoContas == null)
+            {
+                return NotFound();
+            }
+
+            var planoContaModel = ObterPlanoContaModel(planoContas);
+
+            return View(planoContaModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, PlanoContaModel planoContaModel)
+        {
+            if (id != planoContaModel.Id)
+            {
+                return NotFound();
+            }
+
+            //if (ModelState.IsValid)
+            //{
+            //    _context.Update(cliente);
+            //    await _context.SaveChangesAsync();
+
+            //    return RedirectToAction(nameof(Index));
+            //}
+            return View(planoContaModel);
+        }
+
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
