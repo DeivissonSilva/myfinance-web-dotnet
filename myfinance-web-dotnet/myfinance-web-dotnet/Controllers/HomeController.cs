@@ -14,7 +14,7 @@ namespace myfinance_web_dotnet.Controllers
         }
 
         public IActionResult Index()
-        {
+        {   
             return View();
         }
 

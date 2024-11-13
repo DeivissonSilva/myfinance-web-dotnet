@@ -1,7 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using myfinance_web_dotnet.App_Code_Clean.Core.DataAcess;
+using myfinance_web_dotnet.App_Code_Clean.Core.Services;
+using myfinance_web_dotnet.App_Code_Clean.Core.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<MyDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<IPlanoContasServices, PlanoContasServices>();
+builder.Services.AddScoped<PlanoContasRepository>();
+
 
 var app = builder.Build();
 
