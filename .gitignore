@@ -6,3 +6,4 @@ myfinance-web-dotnet/.vs/myfinance-web-dotnet/FileContentIndex/7feda0c9-5809-47b
 /myfinance-web-dotnet/.vs/myfinance-web-dotnet/DesignTimeBuild
 *.dll
 *.cache
+*.dll
