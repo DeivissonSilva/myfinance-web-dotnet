@@ -1,0 +1,39 @@
+﻿@model IEnumerable<HistoricoTransacoesModel>
+
+<style type="text/css">
+    .descricao {
+        text-align:left;
+    }
+</style>  
+
+<h2 style="text-align: center;">
+    Registro de Transações
+</h2>
+<a asp-action="Create" class="btn btn-primary">Nova Transação</a>
+<table class="table" style="text-align: center;">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Histórico</th>
+            <th>Data</th>
+            <th>Plano de Contas</th>
+            <th>Valor</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var _transacoes in Model)
+        {
+            <tr>
+                <td>@_transacoes.Id</td>
+                <td class="descricao">@_transacoes.Descricao</td>
+                <td>@_transacoes.Data </td>
+                <td>@_transacoes.PlanoContas.Descricao</td>
+                <td>@_transacoes.Valor.ToString("C")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@_transacoes.Id" class="btn btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@_transacoes.Id" class="btn btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

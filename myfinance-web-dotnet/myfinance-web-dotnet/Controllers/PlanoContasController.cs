@@ -1,7 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using myfinance_web_dotnet.App_Code_Clean.Core.DTOs;
-using myfinance_web_dotnet.App_Code_Clean.Core.Entities;
 using myfinance_web_dotnet.App_Code_Clean.Core.Services.Interfaces;
 using myfinance_web_dotnet.Models;
 using System.Diagnostics;
@@ -93,13 +91,14 @@ namespace myfinance_web_dotnet.Controllers
                 return NotFound();
             }
 
-            //if (ModelState.IsValid)
-            //{
-            //    _context.Update(cliente);
-            //    await _context.SaveChangesAsync();
+            if (ModelState.IsValid)
+            {
+                var planoContaDto = ObterPlanoContaDto(planoContaModel);
+                await _planoContasServices.AtualizarPlanoContaAsync(planoContaDto);
 
-            //    return RedirectToAction(nameof(Index));
-            //}
+                return RedirectToAction(nameof(Index));
+            }
+
             return View(planoContaModel);
         }
 
@@ -148,6 +147,16 @@ namespace myfinance_web_dotnet.Controllers
                 Descricao = planoContas.Descricao,
                 Ativo = planoContas.Ativo,
                 Tipo = planoContas.Tipo
+            };
+        }
+        private static PlanoContasDto ObterPlanoContaDto(PlanoContaModel planoContaModel)
+        {
+            return new PlanoContasDto
+            {
+                Id = planoContaModel.Id,
+                Descricao = planoContaModel.Descricao,
+                Ativo = planoContaModel.Ativo,
+                Tipo = planoContaModel.Tipo
             };
         }
     }

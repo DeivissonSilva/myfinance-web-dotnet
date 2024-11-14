@@ -14,10 +14,13 @@ namespace myfinance_web_dotnet.App_Code_Clean.Core.Services
             _planoContasRepository = planoContasRepository;
         }
 
-        public async Task<List<PlanoContas>> ObterTodosPlanosContasAsync()
+        public async Task<List<PlanoContasDto>> ObterTodosPlanosContasAsync()
         {
+            var listaPlanos = await _planoContasRepository.GetAllAsync();
+            List<PlanoContasDto> listaPlanoContasDto = [];
+            listaPlanos.ForEach(x => listaPlanoContasDto.Add(ObterPlanoContaDTO(x)));
 
-            return await _planoContasRepository.GetAllAsync();
+            return listaPlanoContasDto;
         }
 
         public async Task<PlanoContasDto> ObterPlanoContaPorIdAsync(int id)
@@ -27,12 +30,6 @@ namespace myfinance_web_dotnet.App_Code_Clean.Core.Services
 
             return PlanoContasDto;
         }
-
-        //public async Task<List<PlanoContas>> BuscarPorNomeAsync(string nome)
-        //{
-        //    return await _planoContasRepository.BuscarPorNomeAsync(nome);
-        //}
-
         public async Task AdicionarPlanoContaAsync(PlanoContasDto planoContasDto)
         {
             var novoPlanoContaEntidade = new PlanoContas
@@ -46,15 +43,16 @@ namespace myfinance_web_dotnet.App_Code_Clean.Core.Services
             await _planoContasRepository.AddAsync(novoPlanoContaEntidade);
         }
 
-        //public async Task AtualizarPlanoContaAsync(PlanoContas planoContas)
-        //{
-        //    await _planoContasRepository.UpdateAsync(planoContas);
-        //}
+        public async Task AtualizarPlanoContaAsync(PlanoContasDto planoContasDto)
+        {
+            var planoContasBd = ObterPlanoContaBD(planoContasDto);
+            await _planoContasRepository.UpdateAsync(planoContasBd);
+        }
 
         public async Task RemoverPlanoContaAsync(PlanoContasDto planoContasDto)
         {
-            var planoContasBD = await ObterPlanoContaPorId(planoContasDto.Id);
-            await _planoContasRepository.DeleteAsync(planoContasBD);
+            var planoContasBd = await ObterPlanoContaPorId(planoContasDto.Id);
+            await _planoContasRepository.DeleteAsync(planoContasBd);
         }
 
         private static PlanoContasDto ObterPlanoContaDTO(PlanoContas planoContas)

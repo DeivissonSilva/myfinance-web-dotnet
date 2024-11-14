@@ -18,6 +18,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Deivisson\Projetos_Estudos\myfinance-web-dotnet\myfinance-web-dotnet\myfinance-web-dotnet
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Deivisson/Projetos_Estudos/myfinance-web-dotnet/myfinance-web-dotnet/myfinance-web-dotnet/Views/HistoricoTransacoes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yaWNvVHJhbnNhY29lc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Deivisson/Projetos_Estudos/myfinance-web-dotnet/myfinance-web-dotnet/myfinance-web-dotnet/Views/HistoricoTransacoes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yaWNvVHJhbnNhY29lc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Deivisson/Projetos_Estudos/myfinance-web-dotnet/myfinance-web-dotnet/myfinance-web-dotnet/Views/HistoricoTransacoes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yaWNvVHJhbnNhY29lc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Deivisson/Projetos_Estudos/myfinance-web-dotnet/myfinance-web-dotnet/myfinance-web-dotnet/Views/HistoricoTransacoes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yaWNvVHJhbnNhY29lc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Deivisson/Projetos_Estudos/myfinance-web-dotnet/myfinance-web-dotnet/myfinance-web-dotnet/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

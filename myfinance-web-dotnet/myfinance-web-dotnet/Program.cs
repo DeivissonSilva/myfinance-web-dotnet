@@ -10,8 +10,12 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 builder.Services.AddScoped<IPlanoContasServices, PlanoContasServices>();
+builder.Services.AddScoped<IHistoricoTransacoesServices, HistoricoTransacoesServices>();
+
 builder.Services.AddScoped<PlanoContasRepository>();
+builder.Services.AddScoped<HistoricoTransacoesRepository>();
 
 
 var app = builder.Build();

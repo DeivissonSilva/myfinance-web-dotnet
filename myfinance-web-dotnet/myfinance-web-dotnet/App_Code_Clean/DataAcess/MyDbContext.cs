@@ -8,6 +8,7 @@ namespace myfinance_web_dotnet.App_Code_Clean.Core.DataAcess
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options) { }
 
         public DbSet<PlanoContas> PlanoContas { get; set; }
+        public DbSet<HistoricoTransacoes> HistoricoTransacoes { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

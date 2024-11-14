@@ -1,0 +1,48 @@
+﻿@model HistoricoTransacoesModel
+
+<h2>Nova Transação</h2>
+
+<form asp-action="Create" onsubmit="formatValor(this)">
+
+    <div class="form-group">
+        <label>Histórico</label>
+        <input asp-for="Descricao" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        <label>Data</label>
+        <input asp-for="Data" type="datetime-local" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        <label for="PlanoContaId">Plano de Conta</label>
+        @Html.DropDownListFor(model => model.PlanoContaId, (SelectList)ViewBag.PlanoContaList, new { @class = "form-control" })
+    </div>
+    <br />
+    <div class="form-group">
+        <label>Valor</label>
+        <input asp-for="Valor" type="text" id="Valor" oninput="formatCurrency(this)" class="form-control" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+
+<script>
+
+    function formatCurrency(input) {
+        var value = input.value.replace(/[^\d]/g, ""); 
+        value = value / 100; 
+
+        input.value = value.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        });
+    }
+
+    function formatValor(form) {
+        var valorInput = form.querySelector('#Valor');
+        var valorLimpo = valorInput.value.replace(/[^\d]/g, "");
+        valorInput.value = (parseInt(valorLimpo) / 100).toFixed(2);
+    }
+
+</script>
