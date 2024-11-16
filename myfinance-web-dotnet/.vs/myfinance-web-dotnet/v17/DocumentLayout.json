@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|d:\\deivisson\\projetos_estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\views\\historicotransacoes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|solutionrelative:myfinance-web-dotnet\\views\\historicotransacoes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|d:\\deivisson\\projetos_estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\controllers\\historicotransacoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|solutionrelative:myfinance-web-dotnet\\controllers\\historicotransacoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|d:\\deivisson\\projetos_estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\views\\historicotransacoes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|solutionrelative:myfinance-web-dotnet\\views\\historicotransacoes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Views\\HistoricoTransacoes\\Index.cshtml",
+              "RelativeDocumentMoniker": "myfinance-web-dotnet\\Views\\HistoricoTransacoes\\Index.cshtml",
+              "ToolTip": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Views\\HistoricoTransacoes\\Index.cshtml",
+              "RelativeToolTip": "myfinance-web-dotnet\\Views\\HistoricoTransacoes\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T14:27:14.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HistoricoTransacoesController.cs",
+              "DocumentMoniker": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Controllers\\HistoricoTransacoesController.cs",
+              "RelativeDocumentMoniker": "myfinance-web-dotnet\\Controllers\\HistoricoTransacoesController.cs",
+              "ToolTip": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Controllers\\HistoricoTransacoesController.cs",
+              "RelativeToolTip": "myfinance-web-dotnet\\Controllers\\HistoricoTransacoesController.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAuwJcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T14:25:59.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Views\\HistoricoTransacoes\\Delete.cshtml",
+              "RelativeDocumentMoniker": "myfinance-web-dotnet\\Views\\HistoricoTransacoes\\Delete.cshtml",
+              "ToolTip": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Views\\HistoricoTransacoes\\Delete.cshtml",
+              "RelativeToolTip": "myfinance-web-dotnet\\Views\\HistoricoTransacoes\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T14:25:16.503Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

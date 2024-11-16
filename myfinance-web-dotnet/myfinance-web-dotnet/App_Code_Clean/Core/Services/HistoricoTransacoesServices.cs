@@ -65,8 +65,8 @@ namespace myfinance_web_dotnet.App_Code_Clean.Core.Services
                 PlanoContaId = historicoTransacoesDb.PlanoContasId,
                 PlanoContasDto = new PlanoContasDto
                 {
-                    Id = historicoTransacoesDb.PlanoContas.Id,
-                    Descricao = historicoTransacoesDb.PlanoContas.Descricao,
+                    Id = historicoTransacoesDb.PlanoContas != null ? historicoTransacoesDb.PlanoContas.Id : 0,
+                    Descricao = historicoTransacoesDb.PlanoContas != null ? historicoTransacoesDb.PlanoContas.Descricao : "",
                 },
                 Data = historicoTransacoesDb.Data,
                 Valor = historicoTransacoesDb.Valor

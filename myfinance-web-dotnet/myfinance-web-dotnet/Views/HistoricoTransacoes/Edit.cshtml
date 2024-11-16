@@ -1,36 +1,51 @@
-﻿@model PlanoContaModel
+﻿@model HistoricoTransacoesModel
 
-<h2>Editar Plano de Conta</h2>
+<h2>Editar Registro de Transação</h2>
 
-<form asp-action="Edit">
-    <input type="hidden" asp-for="Id" />
+<form asp-action="Edit" onsubmit="formatValor(this)">
 
     <div class="form-group">
-        <label>Nome</label>
+        <label>Histórico</label>
         <input asp-for="Descricao" class="form-control" />
     </div>
-
     <br />
-
-    <div class="form-check">
-        <input asp-for="Tipo" class="form-check-input" type="radio" value="R" />
-        <label class="form-check-label" for="Escolha">Receita</label>
+    <div class="form-group">
+        <label>Data</label>
+        <input asp-for="Data" type="datetime-local" class="form-control" />
     </div>
-
-    <div class="form-check">
-        <input asp-for="Tipo" class="form-check-input" type="radio" value="D" />
-        <label class="form-check-label" for="Escolha">Despesa</label>
-    </div>
-
     <br />
-
-    <div class="form-check">
-        <input asp-for="Ativo" class="form-check-input"  type="checkbox" />
-        <label asp-for="Ativo" class="form-check-label">Ativo</label>
+    <div class="form-group">
+        <label for="PlanoContaId">Plano de Conta</label>
+        @Html.DropDownListFor(model => model.PlanoContaId, (SelectList)ViewBag.PlanoContaList, new { @class = "form-control" })
     </div>
-
     <br />
-
+    <div class="form-group">
+        <label>Valor</label>
+        <input asp-for="Valor" type="text" id="Valor" oninput="formatCurrency(this)" class="form-control" />
+    </div>
+    <br />
     <button type="submit" class="btn btn-primary">Salvar</button>
-
 </form>
+
+<script>
+    
+    var elemento = document.getElementById("Valor");
+    window.onload = formatCurrency(elemento);
+
+    function formatCurrency(input) {
+        var value = input.value.replace(/[^\d]/g, "");
+        value = value / 100;
+
+        input.value = value.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        });
+    }
+
+    function formatValor(form) {
+        var valorInput = form.querySelector('#Valor');
+        var valorLimpo = valorInput.value.replace(/[^\d]/g, "");
+        valorInput.value = (parseInt(valorLimpo) / 100).toFixed(2);
+    }
+
+</script>

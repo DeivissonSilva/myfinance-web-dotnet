@@ -1,8 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using myfinance_web_dotnet.App_Code_Clean.Core.DTOs;
-using myfinance_web_dotnet.App_Code_Clean.Core.Entities;
 using myfinance_web_dotnet.App_Code_Clean.Core.Services.Interfaces;
 using myfinance_web_dotnet.Models;
 using System.Diagnostics;
@@ -65,16 +63,18 @@ namespace myfinance_web_dotnet.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(HistoricoTransacoesModel HistoricoTransacoesModel)
+        public async Task<IActionResult> Create(HistoricoTransacoesModel historicoTransacoesModelCreate)
         {
+            ModelState.Remove("PlanoContas");
+
             if (ModelState.IsValid)
             {
                 var novaTransacao = new HistoricoTransacoesDto
                 {
-                    Descricao = HistoricoTransacoesModel.Descricao,
-                    Data = HistoricoTransacoesModel.Data,
-                    Valor = (HistoricoTransacoesModel.Valor / 100),
-                    PlanoContaId = HistoricoTransacoesModel.PlanoContaId,
+                    Descricao = historicoTransacoesModelCreate.Descricao,
+                    Data = historicoTransacoesModelCreate.Data,
+                    Valor = (historicoTransacoesModelCreate.Valor / 100),
+                    PlanoContaId = historicoTransacoesModelCreate.PlanoContaId,
                 };
 
                 await _historicoTransacoesServices.AdicionarHistoricoTransacoesAsync(novaTransacao);
@@ -82,7 +82,7 @@ namespace myfinance_web_dotnet.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            return View(HistoricoTransacoesModel);
+            return View(historicoTransacoesModelCreate);
         }
 
         public async Task<IActionResult> Edit(int? id)
@@ -99,14 +99,20 @@ namespace myfinance_web_dotnet.Controllers
                 return NotFound();
             }
 
-            var HistoricoTransacoesModel = ObterHistoricoTransacoesModel(historicoTransacao);
+            var planoContas = await _planoContasServices.ObterTodosPlanosContasAsync();
+            planoContas = planoContas.OrderBy(item => item.Descricao).ToList();
+            ViewBag.PlanoContaList = new SelectList(planoContas, "Id", "Descricao");
 
-            return View(HistoricoTransacoesModel);
+            var historicoTransacoesModelEdit = ObterHistoricoTransacoesModel(historicoTransacao);
+
+            return View(historicoTransacoesModelEdit);
         }
 
         [HttpPost]
         public async Task<IActionResult> Edit(int id, HistoricoTransacoesModel HistoricoTransacoesModel)
         {
+            ModelState.Remove("PlanoContas");
+
             if (id != HistoricoTransacoesModel.Id)
             {
                 return NotFound();
@@ -115,6 +121,7 @@ namespace myfinance_web_dotnet.Controllers
             if (ModelState.IsValid)
             {
                 var historicoTransacoesModel = ObterPlanoContaDto(HistoricoTransacoesModel);
+                historicoTransacoesModel.Valor = (historicoTransacoesModel.Valor / 100);
                 await _historicoTransacoesServices.AtualizarHistoricoTransacoesAsync(historicoTransacoesModel);
 
                 return RedirectToAction(nameof(Index));
@@ -142,8 +149,9 @@ namespace myfinance_web_dotnet.Controllers
             return View(HistoricoTransacoesModel);
         }
 
-        [HttpPost, Route("Delete")]
-        public async Task<IActionResult> DeleteConfirmed(int Id)
+        [ActionName("DeleteTransacaoConfirmed")]
+        [HttpPost]
+        public async Task<IActionResult> DeleteTransacaoConfirmed(int Id)
         {
             var historicoTransacoesDto = await _historicoTransacoesServices.ObterHistoricoTransacaoPorIdAsync(Id);
 
@@ -167,7 +175,7 @@ namespace myfinance_web_dotnet.Controllers
                 Id = historicoTransacoesDto.Id,
                 Descricao = historicoTransacoesDto.Descricao,
                 Data = historicoTransacoesDto.Data,
-                //Valor = historicoTransacoesDto.Valor.ToString(),
+                Valor = historicoTransacoesDto.Valor,
                 PlanoContaId = historicoTransacoesDto.PlanoContaId
             };
         }
