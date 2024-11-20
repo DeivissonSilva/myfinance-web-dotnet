@@ -9,6 +9,6 @@ namespace myfinance_web_dotnet.App_Code_Clean.Core.Services.Interfaces
         Task AdicionarHistoricoTransacoesAsync(HistoricoTransacoesDto HistoricoTransacoessDto);
         Task AtualizarHistoricoTransacoesAsync(HistoricoTransacoesDto HistoricoTransacoess);
         Task RemoverHistoricoTransacoesAsync(HistoricoTransacoesDto HistoricoTransacoessDto);
-       
+        Task<List<HistoricoTransacoesDto>> ObterTransacoesPorPeriodo(DateTime dataInicio, DateTime dataFim);
     }
 }

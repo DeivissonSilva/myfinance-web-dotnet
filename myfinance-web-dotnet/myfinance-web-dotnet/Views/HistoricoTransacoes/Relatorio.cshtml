@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Inserir Período";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+</head>
+<body>
+    <h1>Informe o Período</h1>
+
+    <form method="post" action="@Url.Action("RelatorioPorPeriodo", "HistoricoTransacoes")">
+        <div>
+            <label for="dataInicio">Data de Início:</label>
+            <input type="date" id="dataInicio" name="dataInicio" required />
+        </div>
+        <div>
+            <label for="dataFim">Data de Fim:</label>
+            <input type="date" id="dataFim" name="dataFim" required />
+        </div>
+        <button type="submit">Gerar Relatório</button>
+    </form>
+
+</body>
+</html>

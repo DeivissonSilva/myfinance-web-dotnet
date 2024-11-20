@@ -1,0 +1,56 @@
+﻿@model IEnumerable<HistoricoTransacoesModel>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Transações</title>
+</head>
+<body>
+    <h1>Relatório de Transações por Período</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Descrição</th>
+                <th>Plano de Conta</th>
+                <th>Tipo</th>
+                <th>Valor</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var transacao in Model)
+            {
+                <tr>
+                    <td>@transacao.Id</td>
+                    <td>@transacao.Descricao</td>
+                    <td>@transacao.PlanoContas.Descricao</td>
+                    <td>@(transacao.PlanoContas.Tipo.Equals("R") ? "Receita" : "Despesa") </td>
+                    <td>@transacao.Valor</td>
+                    <td>@transacao.Data.ToString("dd/MM/yyyy")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <table border="1">
+        <tbody>
+            <tr>
+                <th>Total Receitas: </th>
+                <td>@ViewData["totalReceita"]</td>
+            </tr>
+            <tr>
+                <th>Total Despesas: </th>
+                <td>@ViewData["totalDespesa"]</td>
+            </tr>
+            <tr>
+                <th>Total Geral(R-D): </th>
+                <td>@ViewData["totalGeral"]</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

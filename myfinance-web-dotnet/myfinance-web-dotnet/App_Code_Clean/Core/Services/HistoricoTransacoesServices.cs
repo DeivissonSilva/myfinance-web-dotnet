@@ -56,6 +56,15 @@ namespace myfinance_web_dotnet.App_Code_Clean.Core.Services
             await _historicoTransacoesRepository.DeleteAsync(historicoTransacoesDb);
         }
 
+        public async Task<List<HistoricoTransacoesDto>> ObterTransacoesPorPeriodo(DateTime dataInicio, DateTime dataFim)
+        {
+            var transacoes =  await _historicoTransacoesRepository.ObterTransacoesPorPeriodoDb(dataInicio, dataFim);
+
+            List<HistoricoTransacoesDto> listaTransacoesDto = [];
+            transacoes.ForEach(item => listaTransacoesDto.Add(ObterHistoricoTransacoesDTO(item)));
+            return listaTransacoesDto;
+        }
+
         private static HistoricoTransacoesDto ObterHistoricoTransacoesDTO(HistoricoTransacoes historicoTransacoesDb)
         {
             return new HistoricoTransacoesDto
@@ -67,6 +76,7 @@ namespace myfinance_web_dotnet.App_Code_Clean.Core.Services
                 {
                     Id = historicoTransacoesDb.PlanoContas != null ? historicoTransacoesDb.PlanoContas.Id : 0,
                     Descricao = historicoTransacoesDb.PlanoContas != null ? historicoTransacoesDb.PlanoContas.Descricao : "",
+                    Tipo = historicoTransacoesDb.PlanoContas != null ? historicoTransacoesDb.PlanoContas.Tipo : "",
                 },
                 Data = historicoTransacoesDb.Data,
                 Valor = historicoTransacoesDb.Valor
@@ -89,6 +99,8 @@ namespace myfinance_web_dotnet.App_Code_Clean.Core.Services
         {
             return await _historicoTransacoesRepository.GetByIdAsync(id);
         }
+
+       
     }
 }
 

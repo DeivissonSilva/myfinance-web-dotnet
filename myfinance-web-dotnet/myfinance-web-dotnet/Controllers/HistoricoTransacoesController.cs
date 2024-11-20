@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using myfinance_web_dotnet.App_Code_Clean.Core.DTOs;
+using myfinance_web_dotnet.App_Code_Clean.Core.Services;
 using myfinance_web_dotnet.App_Code_Clean.Core.Services.Interfaces;
 using myfinance_web_dotnet.Models;
 using System.Diagnostics;
@@ -166,6 +167,44 @@ namespace myfinance_web_dotnet.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult Relatorio()
+        {
+            return View();
+        }
+
+        public  async Task<IActionResult> RelatorioPorPeriodo(DateTime dataInicio, DateTime dataFim)
+        {
+            dataFim = dataFim.Date.AddDays(1).AddMilliseconds(-1);
+            var transacoes = await _historicoTransacoesServices.ObterTransacoesPorPeriodo(dataInicio, dataFim);
+            List<HistoricoTransacoesModel> registros = [];
+
+            var totalReceita = transacoes.Where(x=> x.PlanoContasDto.Tipo.Equals("R")).Sum(x => x.Valor);
+            var totalDespesa = transacoes.Where(x => x.PlanoContasDto.Tipo.Equals("D")).Sum(x => x.Valor);
+            var totalGeral = totalReceita - totalDespesa;
+
+            @ViewData["totalReceita"] = totalReceita;
+            @ViewData["totalDespesa"] = totalDespesa;
+            @ViewData["totalGeral"] = totalGeral;
+
+            transacoes.ForEach(item =>
+            {
+                var HistoricoTransacoesModel = new HistoricoTransacoesModel
+                {
+                    Id = item.Id,
+                    Descricao = item.Descricao,
+                    Data = item.Data,
+                    Valor = item.Valor,
+                    PlanoContaId = item.PlanoContaId,
+                    PlanoContas = item.PlanoContasDto
+
+                };
+
+                registros.Add(HistoricoTransacoesModel);
+            });
+
+            return View(registros);
         }
 
         private static HistoricoTransacoesModel ObterHistoricoTransacoesModel(HistoricoTransacoesDto historicoTransacoesDto)
