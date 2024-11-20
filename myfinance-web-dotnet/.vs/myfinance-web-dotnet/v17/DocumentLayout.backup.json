@@ -1,105 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|d:\\deivisson\\projetos_estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\controllers\\historicotransacoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|solutionrelative:myfinance-web-dotnet\\controllers\\historicotransacoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|d:\\deivisson\\projetos_estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\views\\historicotransacoes\\relatorioporperiodo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|solutionrelative:myfinance-web-dotnet\\views\\historicotransacoes\\relatorioporperiodo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|d:\\deivisson\\projetos_estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\views\\historicotransacoes\\relatorio.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|solutionrelative:myfinance-web-dotnet\\views\\historicotransacoes\\relatorio.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|d:\\deivisson\\projetos_estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\app_code_clean\\dataacess\\historicotransacoesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|solutionrelative:myfinance-web-dotnet\\app_code_clean\\dataacess\\historicotransacoesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|d:\\deivisson\\projetos_estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\app_code_clean\\core\\services\\historicotransacoesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|solutionrelative:myfinance-web-dotnet\\app_code_clean\\core\\services\\historicotransacoesservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 4,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HistoricoTransacoesRepository.cs",
-              "DocumentMoniker": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\App_Code_Clean\\DataAcess\\HistoricoTransacoesRepository.cs",
-              "RelativeDocumentMoniker": "myfinance-web-dotnet\\App_Code_Clean\\DataAcess\\HistoricoTransacoesRepository.cs",
-              "ToolTip": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\App_Code_Clean\\DataAcess\\HistoricoTransacoesRepository.cs",
-              "RelativeToolTip": "myfinance-web-dotnet\\App_Code_Clean\\DataAcess\\HistoricoTransacoesRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T00:04:04.047Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RelatorioPorPeriodo.cshtml",
-              "DocumentMoniker": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Views\\HistoricoTransacoes\\RelatorioPorPeriodo.cshtml",
-              "RelativeDocumentMoniker": "myfinance-web-dotnet\\Views\\HistoricoTransacoes\\RelatorioPorPeriodo.cshtml",
-              "ToolTip": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Views\\HistoricoTransacoes\\RelatorioPorPeriodo.cshtml",
-              "RelativeToolTip": "myfinance-web-dotnet\\Views\\HistoricoTransacoes\\RelatorioPorPeriodo.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-20T00:01:45.441Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HistoricoTransacoesServices.cs",
-              "DocumentMoniker": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\App_Code_Clean\\Core\\Services\\HistoricoTransacoesServices.cs",
-              "RelativeDocumentMoniker": "myfinance-web-dotnet\\App_Code_Clean\\Core\\Services\\HistoricoTransacoesServices.cs",
-              "ToolTip": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\App_Code_Clean\\Core\\Services\\HistoricoTransacoesServices.cs",
-              "RelativeToolTip": "myfinance-web-dotnet\\App_Code_Clean\\Core\\Services\\HistoricoTransacoesServices.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAuwEwAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T23:42:34.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Relatorio.cshtml",
-              "DocumentMoniker": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Views\\HistoricoTransacoes\\Relatorio.cshtml",
-              "RelativeDocumentMoniker": "myfinance-web-dotnet\\Views\\HistoricoTransacoes\\Relatorio.cshtml",
-              "ToolTip": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Views\\HistoricoTransacoes\\Relatorio.cshtml",
-              "RelativeToolTip": "myfinance-web-dotnet\\Views\\HistoricoTransacoes\\Relatorio.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T23:30:41.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HistoricoTransacoesController.cs",
-              "DocumentMoniker": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Controllers\\HistoricoTransacoesController.cs",
-              "RelativeDocumentMoniker": "myfinance-web-dotnet\\Controllers\\HistoricoTransacoesController.cs",
-              "ToolTip": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Controllers\\HistoricoTransacoesController.cs",
-              "RelativeToolTip": "myfinance-web-dotnet\\Controllers\\HistoricoTransacoesController.cs",
-              "ViewState": "AgIAAKsAAAAAAAAAAAAAwLMAAABvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T23:27:31.103Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

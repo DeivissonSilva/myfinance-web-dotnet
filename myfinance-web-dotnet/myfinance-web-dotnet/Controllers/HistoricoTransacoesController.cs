@@ -184,9 +184,9 @@ namespace myfinance_web_dotnet.Controllers
             var totalDespesa = transacoes.Where(x => x.PlanoContasDto.Tipo.Equals("D")).Sum(x => x.Valor);
             var totalGeral = totalReceita - totalDespesa;
 
-            @ViewData["totalReceita"] = totalReceita;
-            @ViewData["totalDespesa"] = totalDespesa;
-            @ViewData["totalGeral"] = totalGeral;
+            @ViewData["totalReceita"] = totalReceita.ToString("C2");
+            @ViewData["totalDespesa"] = totalDespesa.ToString("C2");
+            @ViewData["totalGeral"] = totalGeral.ToString("C2");
 
             transacoes.ForEach(item =>
             {
