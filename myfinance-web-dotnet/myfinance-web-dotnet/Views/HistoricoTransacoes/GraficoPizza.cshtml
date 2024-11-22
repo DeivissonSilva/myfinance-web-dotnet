@@ -1,0 +1,73 @@
+﻿@model dynamic
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Pizza - Despesas x Receitas</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        #graficoPizza {
+            max-width: 70%;
+            height: 500px !important;  
+        }
+    </style>
+
+</head>
+<body>
+    <h1 style="margin-left: 100px;">
+        Despesas x Receitas
+    </h1>
+    <canvas id="graficoPizza"></canvas>
+
+    <script>
+
+        const labels = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Labels));
+        const valores = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Valores));
+
+        const ctx = document.getElementById('graficoPizza').getContext('2d');
+        const graficoPizza = new Chart(ctx, {
+            type: 'pie', 
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        data: valores, 
+                        backgroundColor: ['#4CAF50', '#FF5252'],
+                        hoverBackgroundColor: ['#66BB6A', '#FF6E6E']
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom' 
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                let total = valores.reduce((a, b) => a + b, 0);
+                                let valor = context.raw;
+                                let percentual = ((valor / total) * 100).toFixed(2);
+                                return `${context.label}: ${valor} (${percentual}%)`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+
+    <br />
+    <br />
+    <div class="back-link">
+        <a href="@Url.Action("Relatorio", "HistoricoTransacoes")">Voltar ao formulário de período</a>
+    </div>
+
+</body>
+</html>

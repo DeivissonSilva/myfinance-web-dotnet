@@ -16,13 +16,14 @@
     <form method="post" action="@Url.Action("RelatorioPorPeriodo", "HistoricoTransacoes")">
         <div>
             <label for="dataInicio">Data de Início:</label>
-            <input type="date" id="dataInicio" name="dataInicio" required />
+            <input type="date" id="dataInicio" name="dataInicio" value="@ViewBag.DataInicio?.ToString("yyyy-MM-dd")" required />
         </div>
         <div>
             <label for="dataFim">Data de Fim:</label>
-            <input type="date" id="dataFim" name="dataFim" required />
+            <input type="date" id="dataFim" name="dataFim" value="@ViewBag.DataFim?.ToString("yyyy-MM-dd")"  required />
         </div>
-        <button type="submit">Gerar Relatório</button>
+        <button type="submit" name="acao" value="Relatorio">Gerar Relatório</button>
+        <button type="submit" name="acao" value="Grafico">Gerar Gráfico</button>
     </form>
 
 </body>

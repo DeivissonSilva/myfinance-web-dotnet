@@ -8,10 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="JsonConverter.Newtonsoft.Json" Version="0.7.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="Views\HistoricoTransacoes\GraficoPizza.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
     <Content Update="Views\HistoricoTransacoes\RelatorioPorPeriodo.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>

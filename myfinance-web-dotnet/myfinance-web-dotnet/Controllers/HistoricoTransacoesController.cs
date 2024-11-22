@@ -174,8 +174,12 @@ namespace myfinance_web_dotnet.Controllers
             return View();
         }
 
-        public  async Task<IActionResult> RelatorioPorPeriodo(DateTime dataInicio, DateTime dataFim)
+        [HttpPost]
+        public  async Task<IActionResult> RelatorioPorPeriodo(DateTime dataInicio, DateTime dataFim, string acao)
         {
+            ViewBag.DataInicio = dataInicio;
+            ViewBag.DataFim = dataFim;
+
             dataFim = dataFim.Date.AddDays(1).AddMilliseconds(-1);
             var transacoes = await _historicoTransacoesServices.ObterTransacoesPorPeriodo(dataInicio, dataFim);
             List<HistoricoTransacoesModel> registros = [];
@@ -187,24 +191,50 @@ namespace myfinance_web_dotnet.Controllers
             @ViewData["totalReceita"] = totalReceita.ToString("C2");
             @ViewData["totalDespesa"] = totalDespesa.ToString("C2");
             @ViewData["totalGeral"] = totalGeral.ToString("C2");
-
-            transacoes.ForEach(item =>
+           
+            if (acao == null)
             {
-                var HistoricoTransacoesModel = new HistoricoTransacoesModel
-                {
-                    Id = item.Id,
-                    Descricao = item.Descricao,
-                    Data = item.Data,
-                    Valor = item.Valor,
-                    PlanoContaId = item.PlanoContaId,
-                    PlanoContas = item.PlanoContasDto
+                return BadRequest("Ação inválida.");
+            }
 
+            if (acao.Equals("Relatorio"))
+            {
+                transacoes.ForEach(item =>
+                {
+                    var HistoricoTransacoesModel = new HistoricoTransacoesModel
+                    {
+                        Id = item.Id,
+                        Descricao = item.Descricao,
+                        Data = item.Data,
+                        Valor = item.Valor,
+                        PlanoContaId = item.PlanoContaId,
+                        PlanoContas = item.PlanoContasDto
+
+                    };
+
+                    registros.Add(HistoricoTransacoesModel);
+                });
+
+                return View(registros);
+            }
+            else if (acao == "Grafico") 
+            {
+                var dados = new
+                {
+                    Labels = new[] { "Receitas", "Despesas" },
+                    Valores = new[] { totalReceita, totalDespesa }
                 };
 
-                registros.Add(HistoricoTransacoesModel);
-            });
+                return View("GraficoPizza", dados);
+            }
 
-            return View(registros);
+            return BadRequest("Ação inválida.");
+        }
+
+        [HttpGet]
+        public IActionResult RelatorioPorPeriodo()
+        {
+            return View("Relatorio");
         }
 
         private static HistoricoTransacoesModel ObterHistoricoTransacoesModel(HistoricoTransacoesDto historicoTransacoesDto)

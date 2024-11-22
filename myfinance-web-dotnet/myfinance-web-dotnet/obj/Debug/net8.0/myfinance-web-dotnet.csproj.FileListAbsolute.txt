@@ -85,3 +85,7 @@ D:\Deivisson\Projetos_Estudos\myfinance-web-dotnet\myfinance-web-dotnet\myfinanc
 D:\Deivisson\Projetos_Estudos\myfinance-web-dotnet\myfinance-web-dotnet\myfinance-web-dotnet\obj\Debug\net8.0\myfinance-web-dotnet.pdb
 D:\Deivisson\Projetos_Estudos\myfinance-web-dotnet\myfinance-web-dotnet\myfinance-web-dotnet\obj\Debug\net8.0\myfinance-web-dotnet.genruntimeconfig.cache
 D:\Deivisson\Projetos_Estudos\myfinance-web-dotnet\myfinance-web-dotnet\myfinance-web-dotnet\obj\Debug\net8.0\ref\myfinance-web-dotnet.dll
+D:\Deivisson\Projetos_Estudos\myfinance-web-dotnet\myfinance-web-dotnet\myfinance-web-dotnet\bin\Debug\net8.0\JsonConverter.Abstractions.dll
+D:\Deivisson\Projetos_Estudos\myfinance-web-dotnet\myfinance-web-dotnet\myfinance-web-dotnet\bin\Debug\net8.0\JsonConverter.Newtonsoft.Json.dll
+D:\Deivisson\Projetos_Estudos\myfinance-web-dotnet\myfinance-web-dotnet\myfinance-web-dotnet\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Deivisson\Projetos_Estudos\myfinance-web-dotnet\myfinance-web-dotnet\myfinance-web-dotnet\bin\Debug\net8.0\Stef.Validation.dll
