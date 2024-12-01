@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\wwwroot\\img\\logo.jpg",
+      "PackagePath": "staticwebassets\\img\\logo.jpg"
+    },
+    {
+      "Id": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
       "Id": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

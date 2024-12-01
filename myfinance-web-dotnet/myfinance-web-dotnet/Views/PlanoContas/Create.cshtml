@@ -6,6 +6,7 @@
     <div class="form-group">
         <label>Nome</label>
         <input asp-for="Descricao" class="form-control" />
+        <span asp-validation-for="Descricao" class="text-danger"></span>
     </div>
     <div class="form-check">
         <input asp-for="Tipo" class="form-check-input" type="radio" value="R" />
@@ -15,6 +16,7 @@
         <input asp-for="Tipo" class="form-check-input" type="radio" value="D" />
         <label class="form-check-label" for="Escolha">Despesa</label>
     </div>
-
+    <span asp-validation-for="Tipo" class="text-danger"></span>
+    <br />
     <button type="submit" class="btn btn-primary">Salvar</button>
 </form>

@@ -7,11 +7,13 @@
     <div class="form-group">
         <label>Histórico</label>
         <input asp-for="Descricao" class="form-control" />
+        <span asp-validation-for="Descricao" class="text-danger"></span>
     </div>
     <br />
     <div class="form-group">
         <label>Data</label>
         <input asp-for="Data" type="datetime-local" class="form-control" />
+        <span asp-validation-for="Data" class="text-danger"></span>
     </div>
     <br />
     <div class="form-group">
@@ -22,6 +24,7 @@
     <div class="form-group">
         <label>Valor</label>
         <input asp-for="Valor" type="text" id="Valor" oninput="formatCurrency(this)" class="form-control" />
+        <span asp-validation-for="Valor" class="text-danger"></span>
     </div>
     <br />
     <button type="submit" class="btn btn-primary">Salvar</button>

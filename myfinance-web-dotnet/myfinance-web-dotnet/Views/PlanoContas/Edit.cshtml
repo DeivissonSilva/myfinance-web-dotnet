@@ -8,6 +8,7 @@
     <div class="form-group">
         <label>Nome</label>
         <input asp-for="Descricao" class="form-control" />
+        <span asp-validation-for="Descricao" class="text-danger"></span>
     </div>
 
     <br />
@@ -23,6 +24,7 @@
     </div>
 
     <br />
+    <span asp-validation-for="Tipo" class="text-danger"></span>
 
     <div class="form-check">
         <input asp-for="Ativo" class="form-check-input"  type="checkbox" />

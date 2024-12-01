@@ -2,6 +2,18 @@
     ViewData["Title"] = "Inserir Período";
 }
 
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,14 +26,19 @@
     <h1>Informe o Período</h1>
 
     <form method="post" action="@Url.Action("RelatorioPorPeriodo", "HistoricoTransacoes")">
+
         <div>
             <label for="dataInicio">Data de Início:</label>
             <input type="date" id="dataInicio" name="dataInicio" value="@ViewBag.DataInicio?.ToString("yyyy-MM-dd")" required />
         </div>
+        <br />
+     
         <div>
             <label for="dataFim">Data de Fim:</label>
             <input type="date" id="dataFim" name="dataFim" value="@ViewBag.DataFim?.ToString("yyyy-MM-dd")"  required />
         </div>
+      
+        <br />
         <button type="submit" name="acao" value="Relatorio">Gerar Relatório</button>
         <button type="submit" name="acao" value="Grafico">Gerar Gráfico</button>
     </form>

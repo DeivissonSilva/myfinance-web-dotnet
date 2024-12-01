@@ -56,9 +56,7 @@ namespace myfinance_web_dotnet.Controllers
                 Data = DateTime.Now
             };
 
-            var planoContas = await _planoContasServices.ObterTodosPlanosContasAsync();
-            planoContas = planoContas.OrderBy(item => item.Descricao).ToList();
-            ViewBag.PlanoContaList = new SelectList(planoContas, "Id", "Descricao");
+            await CarregarPlanoContas();
 
             return View();
         }
@@ -67,6 +65,14 @@ namespace myfinance_web_dotnet.Controllers
         public async Task<IActionResult> Create(HistoricoTransacoesModel historicoTransacoesModelCreate)
         {
             ModelState.Remove("PlanoContas");
+
+            if (!ModelState.IsValid)
+            {
+                await CarregarPlanoContas();
+
+                return View(historicoTransacoesModelCreate);
+            }
+
 
             if (ModelState.IsValid)
             {
@@ -86,6 +92,13 @@ namespace myfinance_web_dotnet.Controllers
             return View(historicoTransacoesModelCreate);
         }
 
+        private async Task CarregarPlanoContas()
+        {
+            var planoContas = await _planoContasServices.ObterTodosPlanosContasAsync();
+            planoContas = planoContas.OrderBy(item => item.Descricao).ToList();
+            ViewBag.PlanoContaList = new SelectList(planoContas, "Id", "Descricao");
+        }
+
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -100,9 +113,7 @@ namespace myfinance_web_dotnet.Controllers
                 return NotFound();
             }
 
-            var planoContas = await _planoContasServices.ObterTodosPlanosContasAsync();
-            planoContas = planoContas.OrderBy(item => item.Descricao).ToList();
-            ViewBag.PlanoContaList = new SelectList(planoContas, "Id", "Descricao");
+            await CarregarPlanoContas();
 
             var historicoTransacoesModelEdit = ObterHistoricoTransacoesModel(historicoTransacao);
 
@@ -119,6 +130,7 @@ namespace myfinance_web_dotnet.Controllers
                 return NotFound();
             }
 
+
             if (ModelState.IsValid)
             {
                 var historicoTransacoesModel = ObterPlanoContaDto(HistoricoTransacoesModel);
@@ -127,6 +139,8 @@ namespace myfinance_web_dotnet.Controllers
 
                 return RedirectToAction(nameof(Index));
             }
+
+            await CarregarPlanoContas();
 
             return View(HistoricoTransacoesModel);
         }
@@ -175,13 +189,32 @@ namespace myfinance_web_dotnet.Controllers
         }
 
         [HttpPost]
-        public  async Task<IActionResult> RelatorioPorPeriodo(DateTime dataInicio, DateTime dataFim, string acao)
+        public  async Task<IActionResult> RelatorioPorPeriodo(DateTime? dataInicio, DateTime? dataFim, string acao)
         {
+            if (!dataInicio.HasValue || !dataFim.HasValue)
+            {
+                ModelState.AddModelError(string.Empty, "As datas de início e fim são obrigatórias.");
+            }
+
+            if (dataInicio > dataFim)
+            {
+                ModelState.AddModelError(string.Empty, "A data de início não pode ser maior que a data de fim.");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                ViewBag.DataInicio = dataInicio;
+                ViewBag.DataFim = dataFim;
+                return View("Relatorio");
+            }
+
             ViewBag.DataInicio = dataInicio;
             ViewBag.DataFim = dataFim;
 
-            dataFim = dataFim.Date.AddDays(1).AddMilliseconds(-1);
-            var transacoes = await _historicoTransacoesServices.ObterTransacoesPorPeriodo(dataInicio, dataFim);
+            var dataFimdate = Convert.ToDateTime(dataFim);
+            var dataIniciodate = Convert.ToDateTime(dataInicio);
+            dataFimdate = dataFimdate.Date.AddDays(1).AddMilliseconds(-1);
+            var transacoes = await _historicoTransacoesServices.ObterTransacoesPorPeriodo(dataIniciodate, dataFimdate);
             List<HistoricoTransacoesModel> registros = [];
 
             var totalReceita = transacoes.Where(x=> x.PlanoContasDto.Tipo.Equals("R")).Sum(x => x.Valor);

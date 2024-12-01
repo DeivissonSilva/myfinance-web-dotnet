@@ -6,55 +6,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatório de Transações</title>
+    <!-- Link para o Bootstrap 4 -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Relatório de Transações por Período</h1>
 
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Descrição</th>
-                <th>Plano de Conta</th>
-                <th>Tipo</th>
-                <th>Valor</th>
-                <th>Data</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var transacao in Model)
-            {
-                <tr>
-                    <td>@transacao.Id</td>
-                    <td>@transacao.Descricao</td>
-                    <td>@transacao.PlanoContas.Descricao</td>
-                    <td>@(transacao.PlanoContas.Tipo.Equals("R") ? "Receita" : "Despesa") </td>
-                    <td>@transacao.Valor.ToString("C2")</td>
-                    <td>@transacao.Data.ToString("dd/MM/yyyy")</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-    <table border="1">
-        <tbody>
-            <tr>
-                <th>Total Receitas: </th>
-                <td>@ViewData["totalReceita"]</td>
-            </tr>
-            <tr>
-                <th>Total Despesas: </th>
-                <td>@ViewData["totalDespesa"]</td>
-            </tr>
-            <tr>
-                <th>Total Geral(R-D): </th>
-                <td>@ViewData["totalGeral"]</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Relatório de Transações por Período</h1>
 
-    <div class="back-link">
-        <a href="@Url.Action("Relatorio", "HistoricoTransacoes")">Voltar ao formulário de período</a>
+        <!-- Tabela de Transações -->
+        <div class="card">
+            <div class="card-header">
+                <strong>Transações</strong>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Id</th>
+                            <th>Descrição</th>
+                            <th>Plano de Conta</th>
+                            <th>Tipo</th>
+                            <th>Valor</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var transacao in Model)
+                        {
+                            <tr>
+                                <td>@transacao.Id</td>
+                                <td>@transacao.Descricao</td>
+                                <td>@transacao.PlanoContas.Descricao</td>
+                                <td>@(transacao.PlanoContas.Tipo.Equals("R") ? "Receita" : "Despesa")</td>
+                                <td>@transacao.Valor.ToString("C2")</td>
+                                <td>@transacao.Data.ToString("dd/MM/yyyy")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Tabela de Totais -->
+        <div class="card mt-4">
+            <div class="card-header">
+                <strong>Totais</strong>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th>Total Receitas: </th>
+                            <td>@ViewData["totalReceita"]</td>
+                        </tr>
+                        <tr>
+                            <th>Total Despesas: </th>
+                            <td>@ViewData["totalDespesa"]</td>
+                        </tr>
+                        <tr>
+                            <th>Total Geral (R-D): </th>
+                            <td>@ViewData["totalGeral"]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Link para voltar ao formulário -->
+        <div class="mt-4 text-center">
+            <a href="@Url.Action("Relatorio", "HistoricoTransacoes")" class="btn btn-primary">Voltar ao formulário de período</a>
+        </div>
+
     </div>
+
+    <!-- Link para o Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>

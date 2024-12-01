@@ -1,7 +1,10 @@
+using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using myfinance_web_dotnet.App_Code_Clean.Core.DataAcess;
 using myfinance_web_dotnet.App_Code_Clean.Core.Services;
 using myfinance_web_dotnet.App_Code_Clean.Core.Services.Interfaces;
+using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,8 +20,18 @@ builder.Services.AddScoped<IHistoricoTransacoesServices, HistoricoTransacoesServ
 builder.Services.AddScoped<PlanoContasRepository>();
 builder.Services.AddScoped<HistoricoTransacoesRepository>();
 
+var supportedCultures = new[] { new CultureInfo("pt-BR") };
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+    options.DefaultRequestCulture = new RequestCulture("pt-BR");
+    options.SupportedCultures = supportedCultures;
+    options.SupportedUICultures = supportedCultures;
+});
 
 var app = builder.Build();
+
+var localizationOptions = app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value;
+app.UseRequestLocalization(localizationOptions);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
