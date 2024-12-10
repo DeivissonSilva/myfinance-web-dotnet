@@ -1,39 +1,42 @@
 # myfinance-web-dotnet
 - [myfinance-web-dotnet](#myfinance-web-dotnet)
 	- [Sobre](#sobre)
-	- [Script Database](#script-database)
+	- [Diagram Database](#diagram-database)
 	- [Como conectar ao banco de dados](#como-conectar-ao-banco-de-dados)
+  	- [Benefícios da Clean Architecture](#benefícios-da-clean-architecture)
 
 ## Sobre
-MyFinance - Projeto do Curso de Pós-Graduação em Engenharia de Software da PUC-MG
+MyFinance é um projeto desenvolvido como parte do curso de Pós-Graduação em Engenharia de Software da PUC-MG.
+Este sistema foi projetado para gerenciar finanças pessoais, utilizando a stack .NET e o banco de dados SQL Server.
 
-Nesse projeto será utilizada a stack dotnet e, inicialmente, MariaDB mas foi alterado para SQLServer.
-O script pra a criação das entidades se encontra na sessão [Script Database](#script-database) na versão de MariaDB
+O projeto segue os princípios da Clean Architecture, garantindo um código modular, testável e de fácil manutenção.
+A separação de responsabilidades está estruturada em:
+
+Camada de Aplicação: Regras de negócio específicas do caso de uso.
+Camada de Domínio: Regras de negócio genéricas e entidades.
+Camada de Infraestrutura: Acesso a dados e integração com serviços externos.
+Camada de Interface: Apresentação utilizando MVC.
+
+## Diagram Database
 
 <img src="images/db-diagram.png">
 
-## Script Database
-create table plano_contas(
-	id int not null auto_increment,
-	descricao varchar(50) not null,
-	tipo char(1) not null,
-	primary key(id)
-);
-
-create table transacao(
-	id bigint  not null auto_increment,
-	data datetime not null,
-	valor decimal(9,2) not null,
-	tipo char(1) not null,
-	historico text null,
-	id_plano_conta  int not null,
-	primary key(id),
-	foreign key(id_plano_conta) references plano_contas(id)
-);
-
 ## Como conectar ao banco de dados
 
-Para utilizar a aplicação em ambiente local, é necessário seguir os seguintes passos:
-1- Criar o banco de dados no SQLServer;
+Para configurar a aplicação em ambiente local, siga os passos abaixo:
 
-2- Alterar em myfinance-web-dotnet/appsettings.json a ConnectionString onde server é o endereço do banco de dados e Database o nome do banco de dados;
+Criar o banco de dados no SQL Server utilizando o script fornecido.
+Alterar a string de conexão no arquivo appsettings.json, localizado no diretório myfinance-web-dotnet/.
+Atualize os valores de Server (endereço do servidor de banco de dados) e Database (nome do banco de dados).
+Exemplo de ConnectionString:
+
+"ConnectionStrings": {
+    "DefaultConnection": "Server=SEU_SERVIDOR;Database=SEU_BANCO_DE_DADOS;User Id=SEU_USUARIO;Password=SUA_SENHA;"
+}
+
+## Benefícios da Clean Architecture
+O uso da Clean Architecture no projeto permite:
+
+Maior clareza no código, com cada camada tendo responsabilidades bem definidas.
+Facilidade para manutenção e inclusão de novas funcionalidades.
+Redução do acoplamento, promovendo um sistema mais robusto e escalável.
