@@ -7,7 +7,7 @@
 
 ## Sobre
 
-<img src="sistemaInicial.jpg">
+<img src="home.JPG">
 
 MyFinance é um projeto desenvolvido como parte do curso de Pós-Graduação em Engenharia de Software da PUC-MG.
 Este sistema foi projetado para gerenciar finanças pessoais, utilizando a stack .NET e o banco de dados SQL Server.
