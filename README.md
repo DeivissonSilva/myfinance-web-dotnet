@@ -6,6 +6,9 @@
   	- [Benefícios da Clean Architecture](#benefícios-da-clean-architecture)
 
 ## Sobre
+
+<img src="sistemaInicial.jpg">
+
 MyFinance é um projeto desenvolvido como parte do curso de Pós-Graduação em Engenharia de Software da PUC-MG.
 Este sistema foi projetado para gerenciar finanças pessoais, utilizando a stack .NET e o banco de dados SQL Server.
 
@@ -19,7 +22,7 @@ Camada de Interface: Apresentação utilizando MVC.
 
 ## Diagram Database
 
-<img src="images/db-diagram.png">
+<img src="DiagramBD.jpg">
 
 ## Como conectar ao banco de dados
 
