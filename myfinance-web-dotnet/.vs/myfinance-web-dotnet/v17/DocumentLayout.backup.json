@@ -1,37 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|d:\\deivisson\\projetos_estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\views\\historicotransacoes\\relatorioporperiodo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9F11AD6A-6D55-413A-91DB-79A49A7BA70E}|myfinance-web-dotnet\\myfinance-web-dotnet.csproj|solutionrelative:myfinance-web-dotnet\\views\\historicotransacoes\\relatorioporperiodo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RelatorioPorPeriodo.cshtml",
-              "DocumentMoniker": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Views\\HistoricoTransacoes\\RelatorioPorPeriodo.cshtml",
-              "RelativeDocumentMoniker": "myfinance-web-dotnet\\Views\\HistoricoTransacoes\\RelatorioPorPeriodo.cshtml",
-              "ToolTip": "D:\\Deivisson\\Projetos_Estudos\\myfinance-web-dotnet\\myfinance-web-dotnet\\myfinance-web-dotnet\\Views\\HistoricoTransacoes\\RelatorioPorPeriodo.cshtml",
-              "RelativeToolTip": "myfinance-web-dotnet\\Views\\HistoricoTransacoes\\RelatorioPorPeriodo.cshtml",
-              "ViewState": "AgIAADoAAAAAAAAAAIAwwFMAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-01T20:07:45.096Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
