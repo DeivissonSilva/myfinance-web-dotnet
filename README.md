@@ -11,7 +11,7 @@
 
 ## Sobre
 
-<img src="home.JPG">
+<img src="images/home.JPG">
 
 MyFinance é um projeto desenvolvido como parte do curso de Pós-Graduação em Engenharia de Software da PUC-MG.
 Este sistema foi projetado para gerenciar finanças pessoais, utilizando a stack .NET e o banco de dados SQL Server.
@@ -30,19 +30,19 @@ Camada de Interface: Apresentação utilizando MVC.
 
 ## Registro de Transações
 
-<img src="transacao.JPG">
+<img src="images/transacao.JPG">
 
 ## Relatório de Transações por Período
 
-<img src="relatorio.JPG">
+<img src="images/relatorio.JPG">
 
 ## Despesas x Receitas
 
-<img src="grafico.jpg">
+<img src="images/grafico.JPG">
 
 ## Diagrama do Banco de Dados
 
-<img src="DiagramBD.jpg">
+<img src="images/DiagramBD.jpg">
 
 ## Como conectar ao banco de dados
 
