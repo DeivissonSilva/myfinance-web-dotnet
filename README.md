@@ -28,7 +28,8 @@ Camada de Interface: Apresentação utilizando MVC.
 
 Para configurar a aplicação em ambiente local, siga os passos abaixo:
 
-Criar o banco de dados no SQL Server utilizando o script fornecido.
+Criar o banco de dados no SQL Server utilizando o script fornecido na pasta ScriptBd.
+Faça atualização dos packages do projeto.
 Alterar a string de conexão no arquivo appsettings.json, localizado no diretório myfinance-web-dotnet/.
 Atualize os valores de Server (endereço do servidor de banco de dados) e Database (nome do banco de dados).
 Exemplo de ConnectionString:
