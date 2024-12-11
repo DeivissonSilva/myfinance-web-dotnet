@@ -26,15 +26,15 @@ Camada de Interface: Apresentação utilizando MVC.
 
 ## Plano de Contas
 
-<img src="plano.jpg">
+<img src="images/plano.JPG">
 
 ## Registro de Transações
 
-<img src="transacao.jpg">
+<img src="transacao.JPG">
 
 ## Relatório de Transações por Período
 
-<img src="relatorio.jpg">
+<img src="relatorio.JPG">
 
 ## Despesas x Receitas
 
