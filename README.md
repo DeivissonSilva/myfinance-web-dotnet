@@ -1,6 +1,10 @@
 # myfinance-web-dotnet
 - [myfinance-web-dotnet](#myfinance-web-dotnet)
 	- [Sobre](#sobre)
+  	- [Plano de Contas](#plano-de-contas)
+  	- [Registro de Transações](#Registro-de-Transações)
+  	- [Relatório de Transações por Período](#Relatório-de-Transações-por-Período)
+  	- [Despesas x Receitas](#Despesas-x-Receitas)
 	- [Diagrama do banco de dados](#diagrama-do-banco-de-dados)
 	- [Como conectar ao banco de dados](#como-conectar-ao-banco-de-dados)
   	- [Benefícios da Clean Architecture](#benefícios-da-clean-architecture)
@@ -19,6 +23,22 @@ Camada de Aplicação: Regras de negócio específicas do caso de uso.
 Camada de Domínio: Regras de negócio genéricas e entidades.
 Camada de Infraestrutura: Acesso a dados e integração com serviços externos.
 Camada de Interface: Apresentação utilizando MVC.
+
+## Plano de Contas
+
+<img src="plano.jpg">
+
+## Registro de Transações
+
+<img src="transacao.jpg">
+
+## Relatório de Transações por Período
+
+<img src="relatorio.jpg">
+
+## Despesas x Receitas
+
+<img src="grafico.jpg">
 
 ## Diagrama do Banco de Dados
 
