@@ -1,7 +1,7 @@
 # myfinance-web-dotnet
 - [myfinance-web-dotnet](#myfinance-web-dotnet)
 	- [Sobre](#sobre)
-	- [Diagram Database](#diagram-database)
+	- [Diagrama do banco de dados](#diagrama-do-banco-de-dados)
 	- [Como conectar ao banco de dados](#como-conectar-ao-banco-de-dados)
   	- [Benefícios da Clean Architecture](#benefícios-da-clean-architecture)
 
@@ -20,7 +20,7 @@ Camada de Domínio: Regras de negócio genéricas e entidades.
 Camada de Infraestrutura: Acesso a dados e integração com serviços externos.
 Camada de Interface: Apresentação utilizando MVC.
 
-## Diagram Database
+## Diagrama do Banco de Dados
 
 <img src="DiagramBD.jpg">
 
